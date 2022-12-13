@@ -62,7 +62,6 @@ nav a:hover {
     color: rgb(57, 57, 57);
 }
 
-
 /* responsive features for header and nav */
 @media screen and (max-width: 980px) {
 /* for small-destops */
@@ -99,7 +98,7 @@ h1 {
     display: flex;
     justify-content: flex-end;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/smcgarr_pic.png");
-    min-height: 800px;
+    min-height: 700px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -153,6 +152,7 @@ h2 {
 }
 /* responsive features for "hero" section*/
 @media screen and (max-width: 980px) {
+
 .hero-text {
     justify-content: center;
     text-align: center;
@@ -162,6 +162,7 @@ h2 {
     max-height: 80px;
 }
 }
+
 
 
 main {
@@ -204,7 +205,6 @@ span {
 /* referenced https://stackoverflow.com/questions/3148415/how-to-make-a-vertical-line-in-html */
 /* referenced https://www.geeksforgeeks.org/how-to-make-a-vertical-line-using-html/#:~:text=To%20make%20a%20vertical%20line%2C%20use%20border%2Dleft%20or%20border,the%20position%20of%20vertical%20line. */
 
-
 /* .page-section > div {
     flex: 0 0 80%;
 } 
@@ -241,6 +241,7 @@ p {
     justify-content: space-between;
     align-items: flex-end;
     padding: 30px 0;
+/* image from http://www.stickpng.com/img/icons-logos-emojis/coming-soon/coming-soon-handwritten */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coming-soon-handwritten.png");
     border: 5px solid rgb(174, 220, 253);
     background-color: white;
@@ -340,9 +341,9 @@ p {
 */
 
 /* image from http://www.stickpng.com/img/icons-logos-emojis/coming-soon/coming-soon-handwritten */
-.coming-soon {
+/*.coming-soon {
     background-image: url("..images/coming-soon-handwritten.png");
-}
+} */
 
 /* work examples – additional projects */
 /* .additional-project {
@@ -433,9 +434,9 @@ address ul li a {
     }
 
 
-
-
 .address a:hover {
    background-size: 75% 75%;
     color: rgb(174, 220, 253);
 }
+
+
