@@ -83,7 +83,6 @@ nav {
 }
 } 
 
-
 @media screen and (max-width: 768px) {
 /* for tablets */
 h1 {
@@ -152,6 +151,10 @@ h2 {
 }
 /* responsive features for "hero" section*/
 @media screen and (max-width: 980px) {
+.hero-smcgarr {
+    min-height: 500px;
+    flex-shrink: inherit;
+}
 
 .hero-text {
     justify-content: center;
@@ -163,7 +166,13 @@ h2 {
 }
 }
 
-
+@media screen and (max-width: 768px) {
+    /* for tablets */
+.hero-smcgarr {
+    min-height: 400px;
+    flex-shrink: inherit;
+}
+}
 
 main {
     margin-top: 30px;
@@ -434,9 +443,8 @@ address ul li a {
     }
 
 
+
 .address a:hover {
    background-size: 75% 75%;
     color: rgb(174, 220, 253);
 }
-
-

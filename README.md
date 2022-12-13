@@ -1,7 +1,5 @@
 # module-2-challenge-2
 Building a portfolio from scratch
-<<<<<<< Updated upstream
-=======
 
 ## Description
 
@@ -29,8 +27,7 @@ N/A
 
 Please refer to the LICENSE in the repo.
 
-
 Mock-up Reference:
 
 Deployed Website:
->>>>>>> Stashed changes
+
