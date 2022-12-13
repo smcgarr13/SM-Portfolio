@@ -70,7 +70,7 @@ nav a:hover {
 /* referenced https://www.w3schools.com/howto/howto_css_hero_image.asp */
 .hero-smcgarr {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/smcgarr_pic.png");
-    min-height: 800px;
+    min-height: 700px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,13 +94,44 @@ nav a:hover {
 
 /*.hero-text h2 {
     position: fixed;
+<<<<<<< Updated upstream
      bottom: 0;
      right: 0;
+=======
+    bottom: 0;
+    right: 0;
+}
+/* responsive features for "hero" section*/
+@media screen and (max-width: 980px) {
+.hero-smcgarr {
+    min-height: 500px;
+    flex-shrink: inherit;
+}
+
+.hero-text {
+    justify-content: center;
+    text-align: center;
+    font-size: 5vw;
+    margin: 0;
+    width: 100%;
+    max-height: 80px;
+}
+>>>>>>> Stashed changes
 }
 /* responsive features */
 @media screen and (max-width: 980px) {}
 
+<<<<<<< Updated upstream
 @media screen and (max-width: 768px) {}
+=======
+@media screen and (max-width: 768px) {
+    /* for tablets */
+.hero-smcgarr {
+    min-height: 400px;
+    flex-shrink: inherit;
+}
+}
+>>>>>>> Stashed changes
 
 main {
     margin-top: 30px;
@@ -180,6 +211,7 @@ p {
     justify-content: space-between;
     align-items: flex-end;
     padding: 30px 0;
+/* image from http://www.stickpng.com/img/icons-logos-emojis/coming-soon/coming-soon-handwritten */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coming-soon-handwritten.png");
     border: 5px solid rgb(174, 220, 253);
     background-color: white;
@@ -279,9 +311,9 @@ p {
 */
 
 /* image from http://www.stickpng.com/img/icons-logos-emojis/coming-soon/coming-soon-handwritten */
-.coming-soon {
+/*.coming-soon {
     background-image: url("..images/coming-soon-handwritten.png");
-}
+} */
 
 /* work examples – additional projects */
 /* .additional-project {
