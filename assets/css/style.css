@@ -274,13 +274,11 @@ span {
 .project-4 {
     min-height: 200px;
     flex-basis: 48.75%;
-    margin-right: 10px;
 } 
 
 .project-5 {
     min-height: 200px;
     flex-basis: 48.75%;
-    margin-left: 10px;
 }
 
 /* responsive features for work examples section */
@@ -297,14 +295,6 @@ span {
     width: 100%;
     height: 100vh/4;
     }  
-
-.project-4 {
-    margin-right: 0;
-} 
-
-.project-5 {
-    margin-left: 0;
-}
 }
   
 /* contact me */
