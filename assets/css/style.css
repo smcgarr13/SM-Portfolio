@@ -11,7 +11,8 @@
 
 /* header and navbar style info */
 header {
-    padding: 20px 10px;
+    padding: 20px 30px 20px 0;
+    width: auto;
     font-family: 'Josefin', 'Koulen', 'lexend';
     font-size: 1.75rem;
     display: flex;
@@ -25,19 +26,14 @@ header {
 
 h1 {
     margin: 0;
-    padding: 13px 1% 13px 1%;
+    width: auto;
+    padding: 13px 5px 13px 5px;
     font-family: 'Josefin', 'Koulen', 'lexend';
     font-size: 5vw;
     line-height: .75;
     background-color: rgb(174, 220, 253);
     color: rgb(57, 57, 57);
 }
-
-h2, h3 {
-    font-family: 'Josefin', 'Koulen', 'lexend';
-    margin: 0;
-    color: rgb(57, 57, 57);
-  }
 
 nav {
     display: flex;
@@ -50,14 +46,16 @@ nav ul li {
     display: inline;
 }
 
+/* referenced https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions for transitions */
 nav ul li a {
     border-bottom: 3px solid rgb(174, 220, 253);
-    margin-right: 25px;
+    margin-right: 15px;
     font-family: 'Poppins', 'Questrial', 'Quicksand';
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: rgb(174, 220, 253);
-    padding: 8px 16px
+    padding: 8px 16px;
+    transition: all 2s ease-in-out;
 }
 
 nav a:hover {
@@ -66,11 +64,47 @@ nav a:hover {
     color: rgb(57, 57, 57);
 }
 
+/* responsive features for header and nav */
+@media screen and (max-width: 980px) {
+header {
+    padding: 0 0 13px 0;
+    justify-content: center;
+    text-align: center;
+    transition: all 2s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 13px;
+    width: 100%;
+    padding: 18px 0 10px 0;
+    font-size: 13vw;
+}
+
+nav {
+    justify-content: center;
+}
+} 
+
+@media screen and (max-width: 768px) {
+h1 {
+  justify-content: center;
+  text-align: center;
+}
+
+nav ul li a { 
+    font-size: .85rem;
+    padding: 6px 12px;
+}
+}
+
 /* hero section info */
 /* referenced https://www.w3schools.com/howto/howto_css_hero_image.asp */
 .hero-smcgarr {
+    display: flex;
+    justify-content: flex-end;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/smcgarr_pic.png");
-    min-height: 800px;
+   /* Photo Credit to Betwixt Studios */
+    min-height: 700px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,56 +113,96 @@ nav a:hover {
 
 .hero-text {
     display: flex;
-    margin-left: 390px;
-    margin-right: 120px;
-    padding: 13px 8% 13px 2%;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-self: end;
+    background-color: rgb(174, 220, 253);
+    color: rgb(57, 57, 57);
+    padding: 13px 8px 13px 8px;
+    max-height: 65px;
+    margin-bottom: 26px;
     font-family: 'Josefin', 'Koulen', 'lexend';
     font-size: 2.3vw;
     line-height: .8;
-    background-color: rgb(174, 220, 253);
+}
+
+h2 {
+    font-family: 'Josefin', 'Koulen', 'lexend';
+    text-align: start;
+    margin: 0;
+    font-size: 2.5rem;
     color: rgb(57, 57, 57);
+  }
+
+/* responsive features for "hero" section*/
+@media screen and (max-width: 980px) {
+    .hero-smcgarr {
+    min-height: 500px;
+    flex-shrink: inherit;
 }
 
-/*.hero-text h2 {
-    position: fixed;
-     bottom: 0;
-     right: 0;
+.hero-text {
+    justify-content: center;
+    text-align: center;
+    font-size: 5vw;
+    margin: 0;
+    width: 100%;
+    max-height: 80px;
+    transition: all 2s ease-in-out;
 }
-/* responsive features */
-@media screen and (max-width: 980px) {}
+}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+.hero-smcgarr {
+    min-height: 400px;
+    flex-shrink: inherit;
+}
+}
 
 main {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
-p {
-    margin: 0;
-    padding: 15px;
-}
-
+  
 /* page wrapper */
 /*referenced https://ishadeed.com/article/styling-wrappers-css/ */
-
-
 .wrapper {
     margin-right: auto;
     margin-left: auto;
     width: 80%;
 }
 
+/* about me section */
+/* referenced https://stackoverflow.com/questions/3148415/how-to-make-a-vertical-line-in-html */
+/* referenced https://www.geeksforgeeks.org/how-to-make-a-vertical-line-using-html/#:~:text=To%20make%20a%20vertical%20line%2C%20use%20border%2Dleft%20or%20border,the%20position%20of%20vertical%20line. */
+h3 {
+    font-family: 'Josefin', 'Koulen', 'lexend';
+    text-align: start;
+    margin: 0;
+    font-size: 1.75rem;
+    color: rgb(57, 57, 57);
+  }
 
+p {
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+/* work examples – all projects */
+/* referenced https://www.w3schools.com/css/css3_flexbox_container.asp */
 .page-section {
-    border-left: 4px solid rgb(57, 57, 57);
+    /*border-left: 4px solid rgb(57, 57, 57); */
     font-family: 'Poppins', 'Questrial', 'Quicksand';
     line-height: 1;
-    margin: 100px;
-    padding: 30px;
+    margin: 0;
+    padding: 20px;
+}
+
+h4 {
+    font-family: 'Josefin', 'Koulen', 'lexend';
+    margin: 0;
+    font-size: 1.15rem;
+    color: rgb(57, 57, 57);
 }
 
 .container {
@@ -136,43 +210,26 @@ p {
     padding: 15px 5px;
 } 
 
-/* about me section */
-section h2 {
-    text-align: left;
-}
-/* referenced https://stackoverflow.com/questions/3148415/how-to-make-a-vertical-line-in-html */
-/* referenced https://www.geeksforgeeks.org/how-to-make-a-vertical-line-using-html/#:~:text=To%20make%20a%20vertical%20line%2C%20use%20border%2Dleft%20or%20border,the%20position%20of%20vertical%20line. */
-
-
-/* .page-section > div {
-    flex: 0 0 80%;
-} 
-
-p {
-    margin: 0;
-    padding: 25px;
+span {
+    font-size: .7rem;
 }
 
-/* work examples – all projects */
-/* referenced https://www.w3schools.com/css/css3_flexbox_container.asp */
-/* https://www.google.com/search?q=flexbox+made+easy&oq=flexbox+made+easy&aqs=chrome..69i57j0i22i30j0i390l2.4847j0j7&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:15fe0168,vid:fYq5PXgSsbE */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items */
-/* https://www.google.com/search?q=learn+flexbox+in+15+mins+youtube&oq=learn+flexbox+in+15+mins+youtube&aqs=chrome..69i57j33i10i160j33i299.9430j0j7&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:18524e00,vid:fqNPSSoMO9Y */
-/* https://www.youtube.com/watch?v=m8BSEUUB5so */
+/* referenced https://dev.to/drews256/ridiculously-easy-row-and-column-layouts-with-flexbox-1k01 */
+/* referenced https://www.google.com/search?q=flexbox+made+easy&oq=flexbox+made+easy&aqs=chrome..69i57j0i22i30j0i390l2.4847j0j7&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:15fe0168,vid:fYq5PXgSsbE */
+/* referenced https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items */
+/* referenced https://www.google.com/search?q=learn+flexbox+in+15+mins+youtube&oq=learn+flexbox+in+15+mins+youtube&aqs=chrome..69i57j33i10i160j33i299.9430j0j7&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:18524e00,vid:fqNPSSoMO9Y */
+/* referenced https://www.youtube.com/watch?v=m8BSEUUB5so */
 .flexbox-container {
     display: flex;
     flex-direction: column;
-    gap: 10px 10px;
-   /* flex-wrap: wrap;
-    justify-content: center; */
  }
 
- [class ^="block-"]{
+ [class ^="block-"] {
     display: flex;
     flex-direction: row;
-   /* border: 1vh solid pink; */
-    height: (100vh -gap*2)/3;
-    gap: 10px 10px;
+    /*border: 1vh solid pink; */
+    height: 100vh/3;
+    justify-content: space-between;
  }
 
  .flexbox-item {
@@ -180,13 +237,14 @@ p {
     justify-content: space-between;
     align-items: flex-end;
     padding: 30px 0;
+/* image from http://www.stickpng.com/img/icons-logos-emojis/coming-soon/coming-soon-handwritten */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coming-soon-handwritten.png");
     border: 5px solid rgb(174, 220, 253);
     background-color: white;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 25px;
+    margin: 20px 0 0 0;
     text-decoration: none;
     line-height: 1;
 }
@@ -200,126 +258,56 @@ p {
     min-height: 400px;
     flex-basis: 100%;
     flex-shrink: 0;  
+    transition: all 2s ease-in-out;
 }
     
 .project-2 {
     min-height: 200px;
-    flex-basis: 50%;
+    flex-basis: 48.75%;
 }
     
 .project-3 {
     min-height: 200px;
-    flex-basis: 50%;
+    flex-basis: 48.75%;
 }
     
 .project-4 {
     min-height: 200px;
-    flex-basis: 50%;
-}
-   
+    flex-basis: 48.75%;
+    margin-right: 10px;
+} 
 
 .project-5 {
     min-height: 200px;
-    flex-basis: 50%;
+    flex-basis: 48.75%;
+    margin-left: 10px;
 }
 
-/* responsive features */
-
+/* responsive features for work examples section */
 @media screen and (max-width: 768px) {
-
 .project-1 {
     min-height: 200px;
     flex-basis: 100%;
     flex-shrink: 0;  
+    transition: all 2s ease-in-out;
 }
 
 [class ^="block-"]{
     flex-direction: column;
-    height: 100vh/4;
-    justify-content: space-between;
-    }  
-}
-/*
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.flex-container-2 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.flex-item {
-    border: 6px solid rgb(174, 220, 253);
-    margin: 13px;
-    background-color: white;
-    color: rgb(57, 57, 57);
-    padding: 13px 1.25% 13px 8%;
-    line-height: .75;
-    width: 40%;
-    align-items: flex-end;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.flex-item:hover {
-    background-color: rgb(174, 220, 253);
-}
-.first-project {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/Coming_Soon_1.png");
-    min-height: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-*/
-
-/* image from http://www.stickpng.com/img/icons-logos-emojis/coming-soon/coming-soon-handwritten */
-.coming-soon {
-    background-image: url("..images/coming-soon-handwritten.png");
-}
-
-/* work examples – additional projects */
-/* .additional-project {
-    background-color: rgb(174, 220, 253);
-    padding: 13px 1.25% 13px 8%;
-    line-height: .75;
-    width: 40%
-    text-align: left; 
-    }  */
-
-/* referenced https://dev.to/drews256/ridiculously-easy-row-and-column-layouts-with-flexbox-1k01 */
-/*.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
-  }
-  
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-  }
-  
-  .column-1 {
-    background-color: blue;
-    height: 100px;
-  }
-  
-  .column-2 {
-    background-color: green;
-    height: 100px;
-  }
-*/
+    height: 100vh/4;
+    }  
+
+.project-4 {
+    margin-right: 0;
+} 
+
+.project-5 {
+    margin-left: 0;
+}
+}
   
 /* contact me */
-
 address {
     display: flex;
     flex-direction: row;
@@ -340,7 +328,7 @@ address ul li a {
     border-bottom: 3px solid rgb(57, 57, 57);
     margin-right: 25px;
     font-family: 'Poppins', 'Questrial', 'Quicksand';
-    font-size: 1.5rem;
+    font-size: 1.75vw;
     font-style: normal;
     text-decoration: none;
     color: rgb(57, 57, 57);
@@ -348,6 +336,21 @@ address ul li a {
     padding: 8px 16px;
 }
 
+/* responsive features for contact info */
+@media screen and (max-width: 980px) {
+    address ul li a {
+        display: flex;
+        justify-content: space space-around;
+        margin-right: 25px;
+        font-family: 'Poppins', 'Questrial', 'Quicksand';
+        font-size: 1.5vw;
+        font-style: normal;
+        text-decoration: none;
+        color: rgb(57, 57, 57);
+        transition: all 2s ease-in-out;
+        padding: 16px 0;
+    }
+} 
 
 .address a:hover {
    background-size: 75% 75%;
