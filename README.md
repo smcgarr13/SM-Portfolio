@@ -35,6 +35,7 @@ Mock-up Reference:
 
 
 Deployed Website:
+https://smcgarr13.github.io/module-2-challenge-final/
 
 
 
