@@ -30,6 +30,8 @@ This site is responsive for different average screen widths.
 Please refer to the LICENSE in the repo.
 
 Mock-up Reference:
+<a href=assets/images/mock_up_1.png>
+<a href=assets/images/mock_up_2.png>
 
 Deployed Website:
 
