@@ -149,6 +149,7 @@ h2 {
     width: 100%;
     max-height: 80px;
     transition: all 2s ease-in-out;
+    text-decoration: none;
 }
 }
 
@@ -203,15 +204,19 @@ h4 {
     margin: 0;
     font-size: 1.15rem;
     color: rgb(57, 57, 57);
+    text-decoration: none;
 }
 
 .container {
     background-color: rgb(174, 220, 253);
     padding: 15px 5px;
+    text-decoration: none;
 } 
 
 span {
     font-size: .7rem;
+    color: rgb(57, 57, 57);
+    text-decoration: none;
 }
 
 /* referenced https://dev.to/drews256/ridiculously-easy-row-and-column-layouts-with-flexbox-1k01 */
@@ -259,6 +264,7 @@ span {
     flex-basis: 100%;
     flex-shrink: 0;  
     transition: all 2s ease-in-out;
+    background-image: url("../images/JoyRide.png");
 }
     
 .project-2 {
