@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    text-decoration: none;
 }
 
 .root {
@@ -270,6 +271,7 @@ span {
 .project-2 {
     min-height: 200px;
     flex-basis: 48.75%;
+    background-image: url("../images/Randys_Booth_Co_Login.png");
 }
     
 .project-3 {
